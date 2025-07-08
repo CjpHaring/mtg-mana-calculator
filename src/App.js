@@ -14,11 +14,11 @@ const DECK_SIZES = {
 };
 
 const COLORS = [
-  { name: "white", label: "White", image: "/images/plains.svg" },
-  { name: "blue", label: "Blue", image: "/images/island.svg" },
-  { name: "black", label: "Black", image: "/images/swamp.svg" },
-  { name: "red", label: "Red", image: "/images/mountain.svg" },
-  { name: "green", label: "Green", image: "/images/forest.svg" },
+  { name: "white", label: "White", image: process.env.PUBLIC_URL + "/images/plains.svg" },
+  { name: "blue", label: "Blue", image: process.env.PUBLIC_URL + "/images/island.svg" },
+  { name: "black", label: "Black", image: process.env.PUBLIC_URL + "/images/swamp.svg" },
+  { name: "red", label: "Red", image: process.env.PUBLIC_URL + "/images/mountain.svg" },
+  { name: "green", label: "Green", image: process.env.PUBLIC_URL + "/images/forest.svg" },
 ];
 
 export default function App() {
