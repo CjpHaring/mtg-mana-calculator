@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
+/* General app container */
+.app {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: auto;
+  background-color: #fdfdfc;
+  color: #2a2a2a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Controls for max lands and presets */
+.controls {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.controls label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.controls input,
+.controls select {
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: border-color 0.2s ease;
+}
+
+.controls input:focus,
+.controls select:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+.row-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center; /* vertically centers */
+}
+
+/* Mana color sections */
+.color-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+/* Each mana color input box */
+.color-box {
+  background: #ffffff;
+  padding: 0.5rem 1rem;    /* reduce vertical padding from 1rem to 0.5rem */
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.8rem;            /* less gap than 1.2rem */
+  min-height: 50px;       /* add a minimum height to keep things tight */
 }
 
-.App-link {
-  color: #61dafb;
+.color-box input {
+  flex: none;             /* stop flex-grow */
+  width: 80px;            /* fixed width smaller than before */
+  padding: 0.4rem 0.6rem; /* smaller padding */
+  font-size: 0.9rem;      /* slightly smaller font */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fbfbfb;
+  transition: border-color 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Land image styling */
+.image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  height: 90px;           /* reduce from 120px */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Number over image */
+.mana-count {
+  position: absolute;
+  bottom: 30px;           /* adjusted from 40px */
+  right: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  font-size: 1.4rem;      /* slightly smaller */
+  padding: 2px 6px;       /* smaller padding */
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* Input field for each color */
+.color-box input {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fbfbfb;
+  transition: border-color 0.2s ease;
+}
+
+.color-box input:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+/* Responsive behavior */
+@media (max-width: 500px) {
+  .color-box {
+    padding: 0.3rem 1rem;
+    gap: 0.6rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .image-wrapper {
+    width: 120px;  
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border: none;
+    border-radius: 12px;
+  }
+
+  .mana-count {
+    font-size: 1.2rem;
+  }
+
+  .color-box input {
+    width: 100%;
   }
 }
