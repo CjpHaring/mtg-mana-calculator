@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/mtg-mana-calculator/static/css/main.d3c7b90b.css",
-    "main.js": "/mtg-mana-calculator/static/js/main.82f51b15.js",
+    "main.js": "/mtg-mana-calculator/static/js/main.a81e13f8.js",
     "static/js/453.888f7ade.chunk.js": "/mtg-mana-calculator/static/js/453.888f7ade.chunk.js",
     "index.html": "/mtg-mana-calculator/index.html",
     "main.d3c7b90b.css.map": "/mtg-mana-calculator/static/css/main.d3c7b90b.css.map",
-    "main.82f51b15.js.map": "/mtg-mana-calculator/static/js/main.82f51b15.js.map",
+    "main.a81e13f8.js.map": "/mtg-mana-calculator/static/js/main.a81e13f8.js.map",
     "453.888f7ade.chunk.js.map": "/mtg-mana-calculator/static/js/453.888f7ade.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d3c7b90b.css",
-    "static/js/main.82f51b15.js"
+    "static/js/main.a81e13f8.js"
   ]
 }
